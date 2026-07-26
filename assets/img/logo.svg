@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Veda Jyothi Pathashala">
+  <defs>
+    <linearGradient id="vjpFlame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#d1690f"/>
+      <stop offset="55%" stop-color="#f0a23c"/>
+      <stop offset="100%" stop-color="#fbe3a6"/>
+    </linearGradient>
+    <linearGradient id="vjpRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b8912f"/>
+      <stop offset="50%" stop-color="#e3c877"/>
+      <stop offset="100%" stop-color="#b8912f"/>
+    </linearGradient>
+    <linearGradient id="vjpLamp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c2b36"/>
+      <stop offset="100%" stop-color="#5b0e18"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="48" cy="48" r="45" fill="#fdf9f2" stroke="url(#vjpRing)" stroke-width="2.5"/>
+  <circle cx="48" cy="48" r="39" fill="none" stroke="#efe3d0" stroke-width="1"/>
+
+  <!-- rays -->
+  <g stroke="url(#vjpRing)" stroke-width="2" stroke-linecap="round" opacity=".75">
+    <path d="M48 12v6"/>
+    <path d="M23.5 22.5l4.2 4.2"/>
+    <path d="M72.5 22.5l-4.2 4.2"/>
+    <path d="M16 47h6"/>
+    <path d="M74 47h6"/>
+  </g>
+
+  <!-- flame -->
+  <path d="M48 21c6.8 8.2 10.4 14.3 10.4 20.4 0 6.4-4.7 11.2-10.4 11.2s-10.4-4.8-10.4-11.2C37.6 35.3 41.2 29.2 48 21z" fill="url(#vjpFlame)"/>
+  <path d="M48 32.5c3.2 4.1 4.8 7.1 4.8 10 0 3.1-2.2 5.4-4.8 5.4s-4.8-2.3-4.8-5.4c0-2.9 1.6-5.9 4.8-10z" fill="#fdf9f2" opacity=".78"/>
+
+  <!-- lamp -->
+  <path d="M27 57h42c0 8.6-9.4 14.5-21 14.5S27 65.6 27 57z" fill="url(#vjpLamp)"/>
+  <rect x="24" y="53.5" width="48" height="4.6" rx="2.3" fill="url(#vjpRing)"/>
+  <path d="M44 72h8v5h-8z" fill="url(#vjpLamp)"/>
+  <path d="M36 77h24c0 2.2-1.8 3.6-4 3.6H40c-2.2 0-4-1.4-4-3.6z" fill="url(#vjpRing)"/>
+</svg>

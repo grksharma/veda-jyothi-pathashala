@@ -55,6 +55,59 @@ a `data-i18n="key"`; when English is selected, `main.js` swaps in the matching s
 and in the inline Telugu in the HTML. Attributes use `data-i18n-placeholder`,
 `data-i18n-aria`, `data-i18n-title` and `data-i18n-alt`.
 
+## Daily panchangam
+
+The home page shows the Telugu panchangam for **Hyderabad**, rolling over at
+**4:00 AM IST**. There is a **Copy** button and a **WhatsApp share** link — the
+copied text is exactly the format used for the daily forward.
+
+### How it works
+
+`.github/workflows/panchangam.yml` runs nightly, calls the
+[Prokerala Astrology API](https://api.prokerala.com/) via
+`scripts/fetch-panchangam.mjs`, and commits a rolling **35-day** window to
+`data/panchangam.json`. The browser picks today's entry from that window.
+
+The 4 AM switch therefore happens **in the browser**, not in the cron job. This
+matters: GitHub's scheduled workflows fire late and unpredictably, so nothing
+user-visible is allowed to depend on the job running at a precise minute. A
+completely failed job has about a month of runway before anyone notices.
+
+Only days not already cached are fetched, so the steady-state cost is **5 API
+calls a day** (~150/month) against Prokerala's free allowance of 5,000.
+
+### Setup — one-time, needs to be done by the repo owner
+
+1. Sign up free at [api.prokerala.com](https://api.prokerala.com/) and create a
+   client. The **Free** plan (5,000 credits/month, 5 requests/min) is enough.
+2. In this repo: **Settings → Secrets and variables → Actions → New repository
+   secret**, and add both:
+   - `PROKERALA_CLIENT_ID`
+   - `PROKERALA_CLIENT_SECRET`
+3. Go to the **Actions** tab → **Update panchangam** → **Run workflow**. The
+   first run backfills 35 days and replaces the seed data.
+
+Check the run log afterwards. The script prints a `warnings:` list for any line
+it could not derive — a missing line is **omitted rather than guessed**, so a
+wrong field shows up as a gap, never as wrong panchangam data.
+
+`PROBE=1 node scripts/fetch-panchangam.mjs` dumps one raw API response, which is
+the quickest way to correct a field mapping.
+
+### Changing the location
+
+Edit `LOCATION` at the top of `scripts/fetch-panchangam.mjs` (currently
+`17.3850,78.4867`) and delete `data/panchangam.json` so the window refetches.
+
+### Caveats
+
+- GitHub disables scheduled workflows on repos with **no activity for 60 days**.
+  This job commits on every run, which normally counts — but if the panchangam
+  ever freezes, check the Actions tab first.
+- Ayanamsa is **Lahiri (Chitrapaksha)**, the basis of Telugu panchangam.
+- The panchangam block stays in Telugu even in English mode; only the heading
+  and buttons translate.
+
 ## Contact details used on the site
 
 - Phone / WhatsApp: **9032644115** (`tel:+919032644115`, `wa.me/919032644115`)

@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/panchangam.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -110,6 +111,19 @@
         <div class="stat"><b data-i18n="home.stat3.n">ఆన్‌లైన్</b><span data-i18n="home.stat3.l">ప్రపంచవ్యాప్త తరగతులు</span></div>
         <div class="stat"><b data-i18n="home.stat4.n">తెలుగు</b><span data-i18n="home.stat4.l">బోధనా మాధ్యమము</span></div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= PANCHANGAM ================= -->
+  <section class="section section--tight" id="panchangam-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="home.pan.eyebrow">నేటి పంచాంగం</span>
+        <h2 data-i18n="home.pan.title">ఈరోజు పంచాంగం</h2>
+        <div class="divider"><span aria-hidden="true">✦</span></div>
+        <p data-i18n="home.pan.lede">హైదరాబాద్ ప్రాంతమునకు అనుగుణముగా, ప్రతిదినము ఉదయం 4 గంటలకు నవీకరించబడును.</p>
+      </div>
+      <div id="panchangam" class="reveal" aria-live="polite"></div>
     </div>
   </section>
 

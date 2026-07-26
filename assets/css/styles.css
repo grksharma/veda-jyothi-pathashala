@@ -417,6 +417,73 @@ tbody tr:hover { background: var(--cream); }
 .contact-list span, .contact-list a { font-size: .96rem; color: var(--muted); }
 .contact-list a:hover { color: var(--saffron); }
 
+/* ---------- Daily panchangam ---------- */
+.panchangam-card {
+  max-width: 40rem; margin-inline: auto;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, 2.4rem);
+  box-shadow: var(--shadow); position: relative; overflow: hidden;
+}
+.panchangam-card::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 4px;
+  background: linear-gradient(90deg, var(--maroon), var(--saffron), var(--gold), var(--saffron), var(--maroon));
+}
+.panchangam-card--empty { text-align: center; color: var(--muted); }
+
+.panchangam-invocation {
+  text-align: center; font-size: 1.02rem; color: var(--maroon-dark);
+  margin-bottom: .35rem; letter-spacing: .01em;
+}
+.panchangam-date {
+  text-align: center; font-family: var(--font-head); font-weight: 400;
+  font-size: clamp(1.15rem, 1rem + .7vw, 1.5rem); color: var(--maroon);
+  margin-bottom: 1rem;
+}
+.panchangam-head {
+  text-align: center; padding-bottom: 1.1rem; margin-bottom: 1.1rem;
+  border-bottom: 1px dashed var(--line);
+}
+.panchangam-head p { margin: 0 0 .2rem; font-size: .99rem; color: var(--ink-2); }
+.panchangam-head p:first-child { color: var(--saffron); font-weight: 600; }
+
+.panchangam-rows {
+  display: grid; grid-template-columns: minmax(7.5rem, auto) 1fr;
+  gap: .1rem .9rem; margin: 0;
+}
+.panchangam-rows dt {
+  font-weight: 600; color: var(--maroon-dark); font-size: .96rem;
+  padding: .32rem 0;
+}
+.panchangam-rows dt::after { content: ":"; }
+.panchangam-rows dd {
+  margin: 0; padding: .32rem 0; font-size: .96rem; color: var(--ink-2);
+  border-bottom: 1px solid var(--cream-2);
+}
+.panchangam-rows dt { border-bottom: 1px solid var(--cream-2); }
+.panchangam-rows dt:last-of-type, .panchangam-rows dd:last-of-type { border-bottom: 0; }
+
+.panchangam-foot {
+  margin-top: 1.3rem; padding-top: 1.1rem; border-top: 1px dashed var(--line);
+  text-align: center;
+}
+.panchangam-foot p { margin: 0 0 .15rem; font-size: .94rem; color: var(--muted); }
+.panchangam-foot p:first-child { color: var(--maroon); font-weight: 600; }
+
+.panchangam-actions {
+  display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+  margin-top: 1.5rem;
+}
+.panchangam-note {
+  margin: .9rem 0 0; text-align: center; font-size: .82rem; color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .panchangam-rows { grid-template-columns: 1fr; gap: 0; }
+  .panchangam-rows dt { padding-bottom: 0; border-bottom: 0; }
+  .panchangam-rows dd { padding-top: .1rem; padding-bottom: .55rem; }
+  .panchangam-actions .btn { flex: 1 1 100%; }
+}
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--maroon-dark); color: rgba(246, 231, 216, .78); padding: clamp(3rem, 6vw, 4.5rem) 0 0; margin-top: auto; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.3fr; gap: 2.5rem; }

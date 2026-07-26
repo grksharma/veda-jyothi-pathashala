@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "location": "Hyderabad",
+    "coordinates": "17.3850,78.4867",
+    "timezone": "Asia/Kolkata",
+    "ayanamsa": "Lahiri (Chitrapaksha)",
+    "source": "Seed data supplied by hand — replaced on the first successful workflow run",
+    "rollover_hour_ist": 4,
+    "generated_at": "2026-07-26T00:00:00+05:30",
+    "days_available": 1
+  },
+  "days": {
+    "2026-07-26": {
+      "date_te": "ఆదివారం,జూలై.26,2026",
+      "samvatsara": "శ్రీ పరాభవ నామ సంవత్సరం",
+      "ayana_ritu": "దక్షిణాయనం- గ్రీష్మ ఋతువు",
+      "masa_paksha": "ఆషాఢ మాసం - శుక్ల పక్షం",
+      "rows": [
+        { "label": "తిథి", "value": "ద్వాదశి మ1.49 వరకు తదుపరి త్రయోదశి" },
+        { "label": "వారం", "value": "ఆదివారం(భానువాసరే)" },
+        { "label": "నక్షత్రం", "value": "జ్యేష్ఠ ఉ8.35 వరకు" },
+        { "label": "యోగం", "value": "ఐంద్రం రా11.52 వరకు" },
+        { "label": "కరణం", "value": "బాలువ మ1.49 వరకు తదుపరి కౌలువ రా2.50 వరకు" },
+        { "label": "వర్జ్యం", "value": "సా5.28 - 7.14" },
+        { "label": "దుర్ముహూర్తము", "value": "సా4.49 - 5.40" },
+        { "label": "అమృతకాలం", "value": "లేదు" },
+        { "label": "రాహుకాలం", "value": "సా4.30 - 6.00" },
+        { "label": "యమగండ/కేతుకాలం", "value": "మ12.00 - 1.30" },
+        { "label": "సూర్యరాశి", "value": "కర్కాటకం" },
+        { "label": "చంద్రరాశి", "value": "వృశ్చికం" },
+        { "label": "సూర్యోదయం", "value": "5.40" },
+        { "label": "సూర్యాస్తమయం", "value": "6.32" }
+      ]
+    }
+  }
+}

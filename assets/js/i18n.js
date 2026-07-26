@@ -53,6 +53,11 @@ window.VJP_I18N = {
     "home.stat4.n": "తెలుగు",
     "home.stat4.l": "బోధనా మాధ్యమము",
 
+    /* ---- home : panchangam ---- */
+    "home.pan.eyebrow": "నేటి పంచాంగం",
+    "home.pan.title": "ఈరోజు పంచాంగం",
+    "home.pan.lede": "హైదరాబాద్ ప్రాంతమునకు అనుగుణముగా, ప్రతిదినము ఉదయం 4 గంటలకు నవీకరించబడును.",
+
     /* ---- home : guru ---- */
     "home.guru.eyebrow": "మా గురువుగారు",
     "home.guru.title": "బ్రహ్మశ్రీ కొండూరి పవనకుమారశర్మ గారు",
@@ -337,6 +342,11 @@ window.VJP_I18N = {
     "home.stat3.l": "Classes worldwide",
     "home.stat4.n": "Telugu",
     "home.stat4.l": "Medium of teaching",
+
+    /* ---- home : panchangam ---- */
+    "home.pan.eyebrow": "Today's Panchangam",
+    "home.pan.title": "Today's Panchangam",
+    "home.pan.lede": "Calculated for Hyderabad and refreshed every morning at 4 o'clock.",
 
     /* ---- home : guru ---- */
     "home.guru.eyebrow": "Our Guru",

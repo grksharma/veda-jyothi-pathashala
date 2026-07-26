@@ -1,0 +1,54 @@
+name: Update panchangam
+
+# Tops up a rolling window of daily panchangam data for Hyderabad.
+# The website itself rolls over to the new day at 4:00 AM IST from this cached
+# window, so the exact minute this job runs does not matter — it only has to
+# run often enough to keep the window full.
+
+on:
+  schedule:
+    - cron: "30 21 * * *" # 03:00 IST daily (GitHub cron is best-effort)
+  workflow_dispatch:
+    inputs:
+      horizon_days:
+        description: "How many days ahead to keep cached"
+        required: false
+        default: "35"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: panchangam
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch panchangam
+        env:
+          PROKERALA_CLIENT_ID: ${{ secrets.PROKERALA_CLIENT_ID }}
+          PROKERALA_CLIENT_SECRET: ${{ secrets.PROKERALA_CLIENT_SECRET }}
+          HORIZON_DAYS: ${{ inputs.horizon_days || '35' }}
+        run: node scripts/fetch-panchangam.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/panchangam.json; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/panchangam.json
+          git commit -m "Update panchangam data ($(date -u +%Y-%m-%d))"
+          git push

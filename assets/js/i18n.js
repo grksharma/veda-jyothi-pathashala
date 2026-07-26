@@ -65,7 +65,7 @@ window.VJP_I18N = {
     /* ---- home : guru ---- */
     "home.guru.eyebrow": "మా గురువుగారు",
     "home.guru.title": "బ్రహ్మశ్రీ కొండూరి పవనకుమారశర్మ గారు",
-    "home.guru.badge": "విజయవాడ",
+    "home.guru.badge": "బ్రహ్మశ్రీ కొండూరి పవనకుమారశర్మ గారు",
     "home.guru.p1": "మా గురువుగారు బ్రహ్మశ్రీ కొండూరి పవనకుమారశర్మ గారు, విజయవాడ. వారు కొంతకాలముగా గృహస్థులకు, వైదికులకు — daily and occasional rituals లో ఉపయోగపడే విధముగా — అందరూ స్వయముగా అనుష్ఠానం చేసుకోవడానికి వీలుగా పాఠములు చెబుతున్నారు.",
     "home.guru.p2": "సంధ్యావందనం, అగ్నికార్యము, గృహస్థులకు నిత్యౌపాసన, మంత్రపఠనము, బ్రహ్మయజ్ఞం, శ్రీరుద్రము, చమకము, పురుషసూక్తము, శ్రీసూక్తము, మన్యుసూక్తము, దుర్గాసూక్తము — ఇలా అనేకమైనవి, అలాగే విశేషమైన ఆబ్దీక మంత్రపాఠము కూడా బోధిస్తున్నారు. అందరూ దీనిని వినియోగించుకోగలరు.",
     "home.guru.cta": "పూర్తి వివరాలు",
@@ -363,7 +363,7 @@ window.VJP_I18N = {
     /* ---- home : guru ---- */
     "home.guru.eyebrow": "Our Guru",
     "home.guru.title": "Brahmasri Konduri Pavan Kumar Sharma",
-    "home.guru.badge": "Vijayawada",
+    "home.guru.badge": "Brahmasri Konduri Pavan Kumar Sharma",
     "home.guru.p1": "Our guru is Brahmasri Konduri Pavan Kumar Sharma of Vijayawada. For some time now he has been teaching householders and vaidikas the daily and occasional rituals, in a way that lets everyone perform their own anushthanam.",
     "home.guru.p2": "Sandhyavandanam, Agnikaryam, Nitya Aupasana for householders, mantra pathanam, Brahma Yajnam, Sri Rudram, Chamakam, Purusha Suktam, Sri Suktam, Manyu Suktam, Durga Suktam and many more — as well as the special Abdika mantra patham — are all taught. Everyone is welcome to make use of this.",
     "home.guru.cta": "Read more",

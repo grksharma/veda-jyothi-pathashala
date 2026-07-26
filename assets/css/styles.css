@@ -302,7 +302,8 @@ html[lang="te"] .eyebrow { letter-spacing: .06em; text-transform: none; font-siz
 
 /* ---------- Guru / profile ---------- */
 .profile { display: grid; grid-template-columns: minmax(240px, .8fr) 1.2fr; gap: clamp(1.8rem, 4vw, 3.5rem); align-items: center; }
-.profile-figure { position: relative; }
+/* Room underneath for the name badge, which can run to two lines. */
+.profile-figure { position: relative; margin-bottom: 2rem; }
 .profile-frame {
   aspect-ratio: 4/5; border-radius: var(--radius-lg); overflow: hidden;
   border: 1px solid var(--line); background: linear-gradient(160deg, var(--cream-2), var(--cream-3));
@@ -315,7 +316,9 @@ html[lang="te"] .eyebrow { letter-spacing: .06em; text-transform: none; font-siz
   position: absolute; bottom: -18px; inset-inline-start: 50%; transform: translateX(-50%);
   background: var(--white); border: 1px solid var(--line); border-radius: 999px;
   padding: .5rem 1.2rem; font-size: .85rem; font-weight: 600; color: var(--maroon);
-  box-shadow: var(--shadow-sm); white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  max-width: min(100%, 20rem); text-align: center; line-height: 1.4;
+  border-radius: 18px;
 }
 
 /* ---------- Quote ---------- */

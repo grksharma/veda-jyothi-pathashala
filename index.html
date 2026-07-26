@@ -6,7 +6,7 @@
 <title>వేద జ్యోతి పాఠశాల | ఆన్‌లైన్ వేద అధ్యయన కేంద్రం</title>
 <meta name="description" content="బ్రహ్మశ్రీ కొండూరి పవనకుమారశర్మ గారి ఆధ్వర్యంలో సంధ్యావందనం, అగ్నికార్యము, ఔపాసన, సూక్తములు, ఆబ్దీక మంత్రపాఠము — ఆన్‌లైన్ వేద శిక్షణ.">
 <meta name="theme-color" content="#7a1420">
-<link rel="canonical" href="https://grksharma.github.io/veda-jyothi-pathashala/">
+<link rel="canonical" href="https://vedajyothi.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="వేద జ్యోతి పాఠశాల | Veda Jyothi Pathashala">
 <meta property="og:description" content="గృహస్థులకు, వైదికులకు నిత్య అనుష్ఠానంలో ఉపయోగపడే వేద మంత్రపాఠములు — ఆన్‌లైన్‌లో, గురుముఖతః.">
@@ -21,6 +21,7 @@
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/panchangam.js" defer></script>
+<script src="assets/js/feeds.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -124,6 +125,19 @@
         <p data-i18n="home.pan.lede">హైదరాబాద్ ప్రాంతమునకు అనుగుణముగా, ప్రతిదినము ఉదయం 4 గంటలకు నవీకరించబడును.</p>
       </div>
       <div id="panchangam" class="reveal" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ================= DAILY READING ================= -->
+  <section class="section section--cream" id="daily-reading">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="home.feed.eyebrow">ప్రతిదినము</span>
+        <h2 data-i18n="home.feed.title">నేటి పఠనము</h2>
+        <div class="divider"><span aria-hidden="true">✦</span></div>
+        <p data-i18n="home.feed.lede">ఈరోజు విశిష్టత, వేద జీవన విధానము, ఆరోగ్యకరమైన దినచర్య, ధర్మ సందేహములు — ప్రతిదినము ఉదయం 4 గంటలకు మారును.</p>
+      </div>
+      <div id="daily-feeds" class="feed-grid reveal"></div>
     </div>
   </section>
 

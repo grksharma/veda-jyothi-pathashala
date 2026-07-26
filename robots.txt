@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grksharma.github.io/veda-jyothi-pathashala/sitemap.xml
+Sitemap: https://vedajyothi.vercel.app/sitemap.xml

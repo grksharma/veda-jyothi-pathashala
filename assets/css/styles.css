@@ -484,6 +484,33 @@ tbody tr:hover { background: var(--cream); }
   .panchangam-actions .btn { flex: 1 1 100%; }
 }
 
+/* ---------- Daily reading feeds ---------- */
+.feed-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+.feed-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.6rem; box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.feed-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--gold-light); }
+.feed-card-head { display: flex; align-items: center; gap: .7rem; margin-bottom: 1rem; }
+.feed-card-head h3 { margin: 0; font-size: 1.02rem; color: var(--saffron); }
+.feed-icon {
+  flex: 0 0 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
+  font-size: 1.1rem; background: linear-gradient(135deg, var(--cream-2), var(--cream-3));
+  border: 1px solid var(--line);
+}
+.feed-headline {
+  font-family: var(--font-head); font-size: 1.14rem; color: var(--maroon-dark);
+  margin: 0 0 .6rem; line-height: 1.4;
+}
+.feed-card p { font-size: .96rem; color: var(--muted); margin-bottom: .55rem; }
+.feed-card p:last-child { margin-bottom: 0; }
+.feed-disclaimer {
+  margin-top: auto; padding-top: .9rem; border-top: 1px dashed var(--line);
+  font-size: .82rem !important; color: var(--muted); font-style: italic;
+}
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--maroon-dark); color: rgba(246, 231, 216, .78); padding: clamp(3rem, 6vw, 4.5rem) 0 0; margin-top: auto; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.3fr; gap: 2.5rem; }

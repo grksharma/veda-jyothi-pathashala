@@ -55,6 +55,125 @@ const SAMVATSARA = [
 ];
 
 /* ------------------------------------------------------------------ *
+ * Significance of the day (ఈరోజు విశిష్టత)
+ *
+ * Derived, never invented. Anything that cannot be established from the
+ * panchangam is simply left out — a missing note is fine, a wrong one is not.
+ * ------------------------------------------------------------------ */
+
+/** Deity traditionally associated with each weekday. */
+const VAARA_NOTE = [
+  "ఆదివారం — సూర్య ఆరాధనకు విశిష్టమైన దినము",
+  "సోమవారం — పరమశివుని ఆరాధనకు విశిష్టమైన దినము",
+  "మంగళవారం — ఆంజనేయ, సుబ్రహ్మణ్య ఆరాధనకు విశిష్టమైన దినము",
+  "బుధవారం — శ్రీమహావిష్ణువు ఆరాధనకు విశిష్టమైన దినము",
+  "గురువారం — దక్షిణామూర్తి, గురు ఆరాధనకు విశిష్టమైన దినము",
+  "శుక్రవారం — శ్రీమహాలక్ష్మి, అమ్మవారి ఆరాధనకు విశిష్టమైన దినము",
+  "శనివారం — శనైశ్చర, శ్రీవేంకటేశ్వర ఆరాధనకు విశిష్టమైన దినము",
+];
+
+/** Observances that recur every lunar month. Keyed by tithi within the paksha. */
+const MONTHLY = {
+  "shukla-4": "వరద చతుర్థి — వినాయక పూజ",
+  "shukla-6": "స్కంద షష్ఠి — సుబ్రహ్మణ్య స్వామి పూజ",
+  "shukla-11": "ఏకాదశి — ఉపవాసము, విష్ణు ఆరాధన",
+  "shukla-12": "ద్వాదశి — ఏకాదశి ఉపవాస పారణ",
+  "shukla-13": "ప్రదోష వ్రతము — శివారాధన",
+  "shukla-15": "పౌర్ణమి — సత్యనారాయణ వ్రతమునకు విశిష్టమైన దినము",
+  "krishna-4": "సంకష్టహర చతుర్థి — గణపతి ఆరాధన",
+  "krishna-8": "కాలాష్టమి — భైరవ ఆరాధన",
+  "krishna-11": "ఏకాదశి — ఉపవాసము, విష్ణు ఆరాధన",
+  "krishna-12": "ద్వాదశి — ఏకాదశి ఉపవాస పారణ",
+  "krishna-13": "ప్రదోష వ్రతము — శివారాధన",
+  "krishna-14": "మాస శివరాత్రి",
+  "krishna-15": "అమావాస్య — పితృ తర్పణమునకు విశిష్టమైన దినము",
+};
+
+/** Annual festivals, keyed masa|paksha|tithi. Amanta reckoning, as Telugu uses. */
+const FESTIVALS = {
+  "chaitra|shukla|1": "ఉగాది — తెలుగు నూతన సంవత్సరాది",
+  "chaitra|shukla|9": "శ్రీరామ నవమి",
+  "vaisakha|shukla|3": "అక్షయ తృతీయ",
+  "ashadha|shukla|11": "తొలి ఏకాదశి",
+  "ashadha|shukla|15": "గురు పౌర్ణమి — వ్యాస పూజ",
+  "shravana|shukla|15": "జంధ్యాల పౌర్ణమి — ఉపాకర్మ, రక్షాబంధనము",
+  "shravana|krishna|8": "శ్రీకృష్ణ జన్మాష్టమి",
+  "bhadrapada|shukla|4": "వినాయక చవితి",
+  "bhadrapada|krishna|15": "మహాలయ అమావాస్య — పితృ తర్పణము",
+  "ashvayuja|shukla|1": "శరన్నవరాత్రుల ఆరంభము",
+  "ashvayuja|shukla|10": "విజయదశమి — దసరా",
+  "ashvayuja|krishna|14": "నరక చతుర్దశి",
+  "ashvayuja|krishna|15": "దీపావళి",
+  "karthika|shukla|4": "నాగుల చవితి",
+  "karthika|shukla|15": "కార్తీక పౌర్ణమి",
+  "magha|shukla|5": "వసంత పంచమి — శ్రీ పంచమి",
+  "magha|krishna|14": "మహాశివరాత్రి",
+  "phalguna|shukla|15": "హోలీ — కామదహనము",
+};
+
+/** Masa names as they may come back, mapped to a stable key. */
+const MASA_KEYS = [
+  ["chaitra", ["చైత్ర", "chaitra", "chaitram"]],
+  ["vaisakha", ["వైశాఖ", "vaisakha", "vaishakha"]],
+  ["jyeshtha", ["జ్యేష్ఠ", "jyeshtha", "jyaistha"]],
+  ["ashadha", ["ఆషాఢ", "ashadha", "asadha"]],
+  ["shravana", ["శ్రావణ", "shravana", "sravana"]],
+  ["bhadrapada", ["భాద్రపద", "bhadrapada"]],
+  ["ashvayuja", ["ఆశ్వయుజ", "ashvayuja", "ashwina", "ashvina", "aswayuja"]],
+  ["karthika", ["కార్తీక", "karthika", "kartika"]],
+  ["margashira", ["మార్గశిర", "margashira", "margasira"]],
+  ["pushya", ["పుష్య", "pushya", "pausha"]],
+  ["magha", ["మాఘ", "magha"]],
+  ["phalguna", ["ఫాల్గుణ", "phalguna", "falguna"]],
+];
+
+function masaKey(name) {
+  if (!name) return null;
+  const n = String(name).toLowerCase().trim();
+  for (const [key, forms] of MASA_KEYS) {
+    if (forms.some((f) => n.startsWith(f.toLowerCase()))) return key;
+  }
+  return null;
+}
+
+/** Krishna paksha in Telugu is బహుళ; both spellings are accepted. */
+function pakshaKey(name) {
+  if (!name) return null;
+  const n = String(name).toLowerCase();
+  if (/krishna|బహుళ|కృష్ణ/.test(n)) return "krishna";
+  if (/shukla|sukla|శుక్ల/.test(n)) return "shukla";
+  return null;
+}
+
+/** Tithi number within its paksha (1–15), from the API id where possible. */
+function tithiNumber(tithi) {
+  const id = Number(tithi?.id);
+  if (Number.isFinite(id) && id >= 1 && id <= 30) return ((id - 1) % 15) + 1;
+  return null;
+}
+
+function significanceFor(dow, tithi, masaName) {
+  const notes = [];
+
+  const paksha = pakshaKey(tithi?.paksha);
+  const num = tithiNumber(tithi);
+  const masa = masaKey(masaName);
+
+  if (masa && paksha && num) {
+    const festival = FESTIVALS[`${masa}|${paksha}|${num}`];
+    if (festival) notes.push(festival);
+  }
+  if (paksha && num) {
+    const monthly = MONTHLY[`${paksha}-${num}`];
+    // A named festival already covers the day; don't repeat the generic note.
+    if (monthly && !notes.length) notes.push(monthly);
+  }
+  notes.push(VAARA_NOTE[dow]);
+
+  return notes;
+}
+
+/* ------------------------------------------------------------------ *
  * Time formatting — "ఉ8.35", "మ1.49", "సా5.28 - 7.14"
  * ------------------------------------------------------------------ */
 
@@ -286,6 +405,7 @@ async function buildDay(isoDate) {
     masa_paksha: [masaName ? `${masaName} మాసం` : null, paksha ? `${paksha} పక్షం` : null]
       .filter(Boolean)
       .join(" - "),
+    significance: significanceFor(dow, panchang.tithi?.[0], masaName),
     rows,
     ...(warnings.length ? { warnings } : {}),
   };

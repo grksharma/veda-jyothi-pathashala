@@ -1,0 +1,268 @@
+{
+  "_note": "Daily rotating content. One entry from each list is shown per day, chosen by date, so the whole list cycles. Add, edit or reorder freely — length does not matter. IMPORTANT: these entries were drafted as a starting point and should be reviewed by Guruji before being treated as the pathashala's teaching.",
+
+  "living": {
+    "id": "living",
+    "title_te": "వేద జీవన విధానం",
+    "title_en": "The Vedic way of living",
+    "icon": "🪔",
+    "entries": [
+      {
+        "head_te": "బ్రహ్మ ముహూర్తము",
+        "head_en": "Brahma muhurta",
+        "body_te": "సూర్యోదయమునకు సుమారు ఒకటిన్నర గంట ముందు — బ్రహ్మ ముహూర్తములో నిద్రలేచుట ఉత్తమమని శాస్త్రము చెప్పుచున్నది. ఆ సమయమున మనస్సు నిర్మలముగా ఉండును; అధ్యయనమునకు, జపమునకు అదియే అనుకూలము.",
+        "body_en": "The shastra holds the muhurta roughly an hour and a half before sunrise as the best time to rise. The mind is clearest then — it is the hour suited to study and to japa."
+      },
+      {
+        "head_te": "మూడు సంధ్యలు",
+        "head_en": "The three sandhyas",
+        "body_te": "ప్రాతః, మాధ్యాహ్నిక, సాయం — ఈ మూడు సంధ్యా కాలములలో సంధ్యావందనము ఆచరించుట నిత్యకర్మ. ఇది వదలరానిది; ఏ కారణముననైనా వదలినచో ప్రాయశ్చిత్తముతో తిరిగి ప్రారంభించవలెను.",
+        "body_en": "Sandhyavandanam at the three junctions — dawn, midday and dusk — is a daily obligation, not an optional practice. If it lapses for any reason, one resumes it with prayaschitta."
+      },
+      {
+        "head_te": "పంచ మహాయజ్ఞములు",
+        "head_en": "The five daily yajnas",
+        "body_te": "బ్రహ్మయజ్ఞము (వేదాధ్యయనము), దేవయజ్ఞము (హోమము), పితృయజ్ఞము (తర్పణము), భూతయజ్ఞము (జీవులకు అన్నము), మనుష్యయజ్ఞము (అతిథి సేవ) — గృహస్థుడు ప్రతిదినము ఆచరించవలసిన ఐదు యజ్ఞములు ఇవి.",
+        "body_en": "Brahma yajna (study of the Veda), deva yajna (offering), pitru yajna (tarpanam), bhuta yajna (food for other creatures) and manushya yajna (care of guests) — the five a householder performs each day."
+      },
+      {
+        "head_te": "అతిథి దేవో భవ",
+        "head_en": "The guest as deity",
+        "body_te": "ఇంటికి వచ్చిన అతిథిని దైవముగా భావించి ఆదరించుట గృహస్థ ధర్మము. అతిథి భోజనము చేసిన పిదపనే గృహస్థుడు భుజించుట సంప్రదాయము.",
+        "body_en": "Receiving a guest as one would receive the divine is the householder's dharma. By tradition the householder eats only after the guest has eaten."
+      },
+      {
+        "head_te": "గోసేవ",
+        "head_en": "Care of the cow",
+        "body_te": "గోమాతను పూజించుట, సంరక్షించుట సనాతన ధర్మములో ప్రధానమైన అంశము. గోగ్రాసము — భోజనమునకు ముందు ఆవునకు కొంత అన్నము పెట్టుట — నిత్యము ఆచరించదగినది.",
+        "body_en": "Honouring and protecting the cow is central to Sanatana Dharma. Gograsam — setting aside a portion of food for the cow before one eats — is a practice for every day."
+      },
+      {
+        "head_te": "భోజన నియమము",
+        "head_en": "At the meal",
+        "body_te": "తూర్పు లేదా ఉత్తర ముఖముగా కూర్చుని, పరిశుభ్రముగా, మౌనముగా భుజించుట మంచిది. భోజనమునకు ముందు పరిషేచనము, అన్నమునకు కృతజ్ఞత — ఇవి అన్నమును యజ్ఞముగా మార్చును.",
+        "body_en": "Sit facing east or north, clean, and eat in silence. The parishechana before eating, and gratitude for the food, turn an ordinary meal into an offering."
+      },
+      {
+        "head_te": "వాక్ శుద్ధి",
+        "head_en": "Purity of speech",
+        "body_te": "సత్యం బ్రూయాత్, ప్రియం బ్రూయాత్ — సత్యమునే పలుకవలెను, ప్రియముగా పలుకవలెను; సత్యమైనను అప్రియమును పలుకరాదు. మంత్రోచ్చారణ చేయు నోటికి ఇది మరింత అవసరము.",
+        "body_en": "Speak the truth, speak it kindly, and do not speak an unkind truth. For a mouth that recites mantras, this discipline matters all the more."
+      },
+      {
+        "head_te": "స్వాధ్యాయము",
+        "head_en": "Daily study",
+        "body_te": "నేర్చుకున్న పాఠమును ప్రతిదినము పునశ్చరణ చేయుట స్వాధ్యాయము. కొద్దిసేపైనను నిత్యము అభ్యసించుట — వారమునకొకసారి ఎక్కువసేపు చేయుటకంటె ఎంతో మేలు.",
+        "body_en": "Svadhyaya is the daily revision of what one has learnt. A short practice every day is worth far more than a long one once a week."
+      },
+      {
+        "head_te": "మాతృ పితృ సేవ",
+        "head_en": "Service to parents",
+        "body_te": "మాతృదేవో భవ, పితృదేవో భవ, ఆచార్యదేవో భవ — తల్లిదండ్రులను, గురువును దైవముగా భావించుట ఉపనిషత్ ఉపదేశము. ఎంత అధ్యయనము చేసినను ఇది లోపించినచో ఫలము లేదు.",
+        "body_en": "Revere your mother, your father and your teacher as the divine — this is the Upanishad's instruction. However much one studies, without this it bears no fruit."
+      },
+      {
+        "head_te": "శౌచము",
+        "head_en": "Purity",
+        "body_te": "బాహ్య శౌచము (స్నానము, శుభ్రమైన వస్త్రములు), అంతః శౌచము (మనోనిర్మలత) — రెండును అవసరము. అనుష్ఠానమునకు ముందు స్నానము, ఆచమనము తప్పనిసరి.",
+        "body_en": "Outer purity — bathing, clean clothes — and inner purity of mind are both required. Bathing and achamanam before any anushthanam are not optional."
+      },
+      {
+        "head_te": "దానము",
+        "head_en": "Giving",
+        "body_te": "శ్రద్ధయా దేయమ్ — శ్రద్ధతో ఇవ్వవలెను. ఎంత ఇచ్చామన్నది కాదు, ఎట్లు ఇచ్చామన్నదే ముఖ్యము. అన్నదానము సర్వదానములలో శ్రేష్ఠమని చెప్పబడినది.",
+        "body_en": "Give with shraddha. It is not how much one gives but how one gives. The giving of food is called the highest of all gifts."
+      },
+      {
+        "head_te": "తర్పణము",
+        "head_en": "Tarpanam",
+        "body_te": "ఋషులు, దేవతలు, పితృదేవతలు — ఈ మువ్వురకు జలముతో తర్పణము విడుచుట బ్రహ్మయజ్ఞములో భాగము. అమావాస్య, గ్రహణ కాలములలో ఇది విశేషముగా ఆచరించబడును.",
+        "body_en": "Offering water to the rishis, the devas and the pitrus is part of Brahma yajna. It is observed with special care on amavasya and at eclipse times."
+      },
+      {
+        "head_te": "తులసి, వృక్ష సేవ",
+        "head_en": "Tulasi and trees",
+        "body_te": "ఇంటి ముంగిట తులసిని పెంచుట, ప్రతిదినము జలము పోసి నమస్కరించుట సంప్రదాయము. వృక్షములను నాటుట, సంరక్షించుట కూడ ధర్మముగానే పరిగణించబడినది.",
+        "body_en": "Growing tulasi at the doorstep, watering it and bowing to it daily is long tradition. Planting and protecting trees has likewise always been counted as dharma."
+      },
+      {
+        "head_te": "నిద్రా నియమము",
+        "head_en": "Rest",
+        "body_te": "రాత్రి త్వరగా నిద్రించి, తెల్లవారుజామున లేచుట శరీరమునకు, సాధనకు రెండింటికిని మేలు. తూర్పు లేదా దక్షిణ దిక్కుగా తల ఉంచి పరుండుట మంచిదని చెప్పబడినది.",
+        "body_en": "Sleeping early and rising before dawn serves both the body and the sadhana. Lying with the head to the east or the south is held to be good."
+      },
+      {
+        "head_te": "సంకల్పము",
+        "head_en": "Sankalpa",
+        "body_te": "ఏ కర్మనైనను దేశ, కాల, గోత్ర, నామములను స్మరించి సంకల్పముతో ప్రారంభించుట పద్ధతి. సంకల్పము లేని కర్మ పూర్ణఫలమునీయదని శాస్త్రవచనము.",
+        "body_en": "Any rite begins with a sankalpa, naming the place, the time, one's gotra and name. The shastra holds that an act begun without sankalpa does not yield its full fruit."
+      }
+    ]
+  },
+
+  "health": {
+    "id": "health",
+    "title_te": "ఆరోగ్యకరమైన జీవనము",
+    "title_en": "Healthy living, the traditional way",
+    "icon": "🌿",
+    "disclaimer_te": "ఇవి సంప్రదాయబద్ధమైన దినచర్య పద్ధతులు మాత్రమే; వైద్య సలహా కాదు. అనారోగ్య సమయములలో వైద్యులను సంప్రదించగలరు.",
+    "disclaimer_en": "These describe traditional daily routine, not medical advice. Please consult a doctor for any health concern.",
+    "entries": [
+      {
+        "head_te": "ఉదయాన్నే ఉష్ణోదకము",
+        "head_en": "Warm water on rising",
+        "body_te": "నిద్రలేచిన వెంటనే కొద్దిగా గోరువెచ్చని నీరు సేవించుట దినచర్యలో మొదటి అంశముగా చెప్పబడినది. ఇది జఠరాగ్నిని ప్రేరేపించునని ఆయుర్వేదము పేర్కొనుచున్నది.",
+        "body_en": "A little warm water on waking is named as the first step of the daily routine. Ayurveda describes it as kindling the digestive fire."
+      },
+      {
+        "head_te": "దంతధావనము",
+        "head_en": "Cleaning the teeth",
+        "body_te": "వేప, మఱ్ఱి, మామిడి వంటి చెట్ల పుల్లలతో దంతధావనము, తరువాత జిహ్వా నిర్లేఖనము (నాలుక శుభ్రపరచుట) — ఇవి ప్రాతఃకాల దినచర్యలో భాగము.",
+        "body_en": "Cleaning the teeth with a twig of neem or a similar tree, followed by scraping the tongue, belongs to the morning routine."
+      },
+      {
+        "head_te": "అభ్యంగము",
+        "head_en": "Abhyanga",
+        "body_te": "శరీరమునకు నూనె రాచుకొని కొద్దిసేపటి తరువాత స్నానము చేయుట అభ్యంగము. వారమునకు కొన్ని దినములు ఆచరించుట ఆనవాయితీ; పండుగ దినములలో విశేషముగా చేయుదురు.",
+        "body_en": "Abhyanga is the application of oil to the body before bathing. It is customarily done on certain days of the week, and with special care on festival days."
+      },
+      {
+        "head_te": "మితాహారము",
+        "head_en": "Moderation in food",
+        "body_te": "కడుపులో సగము అన్నము, పావు వంతు నీరు, పావు వంతు ఖాళీ — ఇది శాస్త్రము చెప్పు కొలత. ఆకలి వేసినపుడే భుజించుట, ముందు తిన్నది జీర్ణమైన తరువాతనే మరల భుజించుట ముఖ్యము.",
+        "body_en": "Half the stomach for food, a quarter for water, a quarter left empty — that is the measure the texts give. Eat when hungry, and only once the previous meal has digested."
+      },
+      {
+        "head_te": "మధ్యాహ్న భోజనము",
+        "head_en": "The midday meal",
+        "body_te": "సూర్యుడు నడినెత్తిన ఉన్నపుడు జఠరాగ్ని అధికముగా ఉండునని, కావున ఆ సమయమునందే ప్రధాన భోజనము చేయుట మంచిదని ఆయుర్వేదము చెప్పుచున్నది. రాత్రి భోజనము తేలికగా ఉండవలెను.",
+        "body_en": "Ayurveda holds the digestive fire strongest when the sun is overhead, so the main meal belongs at midday. The night meal should be light."
+      },
+      {
+        "head_te": "ఋతుచర్య",
+        "head_en": "Eating with the season",
+        "body_te": "ఆహారము, దినచర్య ఋతువును బట్టి మారవలెను — గ్రీష్మములో శీతల, ద్రవ పదార్థములు; శీతకాలములో ఉష్ణమైన, స్నిగ్ధమైన ఆహారము. ఋతువుకు విరుద్ధమైన ఆహారము వలననే అనేక వ్యాధులని చెప్పబడినది.",
+        "body_en": "Food and routine should change with the season — cooling and liquid foods in summer, warm and unctuous ones in winter. Much illness is attributed to eating against the season."
+      },
+      {
+        "head_te": "వ్యాయామము",
+        "head_en": "Exercise",
+        "body_te": "శక్తిలో సగము వరకే వ్యాయామము చేయవలెను — నుదుటిపై, చంకలలో చెమట పట్టునంత వరకు. అంతకు మించినది బలమునిచ్చుటకు బదులు హాని చేయునని శాస్త్రము హెచ్చరించుచున్నది.",
+        "body_en": "Exercise only to half one's capacity — until sweat appears on the forehead and underarms. Beyond that, the texts warn, it harms rather than strengthens."
+      },
+      {
+        "head_te": "జలపానము",
+        "head_en": "Drinking water",
+        "body_te": "నీరు కూర్చుని, నెమ్మదిగా, గుక్కగుక్కగా త్రాగుట పద్ధతి. భోజనమునకు మధ్యలో కొద్దిగా; భోజనమునకు వెంటనే ముందు గాని, వెంటనే తరువాత గాని అధికముగా త్రాగకూడదు.",
+        "body_en": "Water is taken seated, slowly, in sips — a little during the meal, but not in quantity immediately before or after it."
+      },
+      {
+        "head_te": "ప్రాణాయామము",
+        "head_en": "Pranayama",
+        "body_te": "సంధ్యావందనములో ప్రాణాయామము ఒక అంగము. శ్వాసను క్రమబద్ధము చేయుట మనస్సును నిలుపును; మంత్రోచ్చారణకు కావలసిన శ్వాస నియంత్రణ కూడ దీనివలననే అలవడును.",
+        "body_en": "Pranayama is a limb of sandhyavandanam itself. Steadying the breath steadies the mind, and it builds the breath control that clear mantra recitation needs."
+      },
+      {
+        "head_te": "ఉపవాసము",
+        "head_en": "Fasting",
+        "body_te": "ఏకాదశి వంటి దినములలో ఉపవాసము ఆచరించుట ధార్మికముగానే కాక, జీర్ణ వ్యవస్థకు విశ్రాంతినిచ్చు పద్ధతిగా కూడ చెప్పబడినది. ద్వాదశినాడు పారణ సకాలములో చేయవలెను.",
+        "body_en": "Fasting on days such as Ekadashi is described not only as an observance but as rest for the digestive system. The parana on Dvadashi should be taken at its proper time."
+      },
+      {
+        "head_te": "భోజనానంతరము",
+        "head_en": "After eating",
+        "body_te": "భోజనము చేసిన వెంటనే పరుండరాదు, పరుగెత్తరాదు. కొద్దిసేపు నెమ్మదిగా నడచుట, తరువాత విశ్రాంతి — ఇది జీర్ణమునకు అనుకూలమని చెప్పబడినది.",
+        "body_en": "Neither lie down nor exert oneself straight after a meal. A slow short walk, then rest, is said to suit digestion."
+      },
+      {
+        "head_te": "నిద్ర",
+        "head_en": "Sleep",
+        "body_te": "రాత్రి జాగరణ, పగటి నిద్ర రెండును సాధారణముగా నిషేధించబడినవి. గ్రీష్మ ఋతువులో మాత్రము పగటి నిద్రకు అనుమతి కలదని ఆయుర్వేద గ్రంథములు పేర్కొనుచున్నవి.",
+        "body_en": "Staying up at night and sleeping in the day are generally both discouraged. The Ayurvedic texts allow daytime sleep in the summer season alone."
+      }
+    ]
+  },
+
+  "dharma": {
+    "id": "dharma",
+    "title_te": "ధర్మ సందేహాలు",
+    "title_en": "Questions on dharma",
+    "icon": "❓",
+    "disclaimer_te": "ఈ సమాధానములు సాధారణ మార్గదర్శనము మాత్రమే. శాఖ, సూత్రము, కుల ఆచారమును బట్టి విధానము మారును — మీ విషయమున గురువుగారిని సంప్రదించగలరు.",
+    "disclaimer_en": "These answers are general guidance only. Practice varies by shakha, sutra and family custom — please consult the guru for your own case.",
+    "entries": [
+      {
+        "head_te": "సంధ్యావందనము మూడు పూటలే ఎందుకు?",
+        "head_en": "Why is sandhyavandanam done three times?",
+        "body_te": "పగలు, రాత్రి కలియు కాలమునే సంధ్య అందురు. ప్రాతః, మధ్యాహ్న, సాయం — ఈ మూడు సంధి కాలములు సాధనకు అనుకూలమైనవిగా చెప్పబడినవి. ఆ సమయములలో గాయత్రీ ఉపాసన చేయుటయే సంధ్యావందనము.",
+        "body_en": "Sandhya means the joint between day and night. The three junctions — dawn, midday and dusk — are held to be the times suited to sadhana, and the Gayatri upasana done at them is sandhyavandanam."
+      },
+      {
+        "head_te": "సమయము దాటిపోయినచో ఏమి చేయవలెను?",
+        "head_en": "What if the proper time has passed?",
+        "body_te": "సకాలములో చేయుటయే ఉత్తమము. దాటిపోయినచో వదలివేయక, ప్రాయశ్చిత్తార్థముగా అదనపు గాయత్రీ జపముతో ఆ సంధ్యను ఆచరించుట పద్ధతి. ఎంత ఆలస్యమైనను చేయుట మేలు — పూర్తిగా వదలుట కాదు.",
+        "body_en": "Doing it at the proper time is best. If the time has passed, one does not abandon it — the sandhya is performed with additional Gayatri japa by way of prayaschitta. Late is better than not at all."
+      },
+      {
+        "head_te": "ఆచమనము ఎందుకు?",
+        "head_en": "What is achamanam for?",
+        "body_te": "ఏ కర్మనైనను ప్రారంభించుటకు ముందు అంతర్బాహ్య శుద్ధి కొరకు ఆచమనము. కేశవాది నామములను స్మరించుచు జలమును గ్రహించుట ద్వారా శరీరము, వాక్కు, మనస్సు శుద్ధమగునని చెప్పబడినది.",
+        "body_en": "Achamanam purifies inwardly and outwardly before any rite begins. Taking water while reciting the names beginning with Keshava is held to purify body, speech and mind."
+      },
+      {
+        "head_te": "వేద మంత్రములలో స్వరము ఎందుకు అంత ముఖ్యము?",
+        "head_en": "Why does svara matter so much?",
+        "body_te": "వేదమంత్రమునకు అక్షరముతో పాటు స్వరము కూడ శరీరము వంటిది. ఉదాత్త, అనుదాత్త, స్వరిత భేదములు మారినచో అర్థమే మారిపోవును. అందుకే గురుముఖతః వినుచు నేర్చుకొనుట తప్పనిసరి — పుస్తకము చాలదు.",
+        "body_en": "In a Vedic mantra the svara is as much its body as the syllables are. If udatta, anudatta and svarita shift, the sense itself shifts. This is why one must learn by listening to the guru — a book alone will not do."
+      },
+      {
+        "head_te": "సంకల్పములో గోత్రము ఎందుకు చెప్పవలెను?",
+        "head_en": "Why is the gotra named in the sankalpa?",
+        "body_te": "సంకల్పమనగా ఏ కర్మను, ఎవరు, ఎక్కడ, ఎప్పుడు చేయుచున్నారో స్పష్టముగా నిర్దేశించుట. దేశము, కాలము, గోత్రము, నామము — ఈ నాలుగును చెప్పుట ద్వారా కర్మ ఎవరిదో నిర్ధారితమగును.",
+        "body_en": "A sankalpa states precisely which rite is being done, by whom, where and when. Naming the place, the time, the gotra and one's name fixes to whom the act belongs."
+      },
+      {
+        "head_te": "అమావాస్యనాడు తర్పణము ఎందుకు?",
+        "head_en": "Why tarpanam on amavasya?",
+        "body_te": "పితృదేవతలకు అమావాస్య విశేషమైన దినముగా చెప్పబడినది. ఆ దినమున జలతర్పణము ద్వారా పితృఋణమును కొంతవరకు తీర్చుకొనుట గృహస్థ ధర్మము.",
+        "body_en": "Amavasya is held to be the day particular to the pitrus. Offering water to them on that day is part of how a householder discharges the debt owed to the ancestors."
+      },
+      {
+        "head_te": "ఆబ్దీకము స్వయముగా చేసుకొనవచ్చునా?",
+        "head_en": "Can one perform abdikam oneself?",
+        "body_te": "మంత్రపాఠమును సక్రమముగా నేర్చుకొని, విధానము తెలిసినచో స్వయముగా ఆచరించుటయే శ్రేష్ఠము. అందుకే ఆబ్దీక మంత్రపాఠమును క్రమము, సందర్భ వివరణతో సహా నేర్పుట మా పాఠశాలలో విశేష పాఠములలో ఒకటి.",
+        "body_en": "If one has learnt the mantra patham properly and knows the sequence, performing it oneself is the best course. That is why the Abdika mantra patham, with its sequence and context explained, is one of this pathashala's special lessons."
+      },
+      {
+        "head_te": "ఔపాసన ఎవరు చేయవలెను?",
+        "head_en": "Who performs aupasana?",
+        "body_te": "వివాహానంతరము గృహస్థుడు దంపతి సహితముగా ఆచరించవలసిన నిత్యకర్మ ఔపాసన. వివాహాగ్నియే ఔపాసనాగ్నిగా కొనసాగును. ఇది నిత్యము — ఉదయము, సాయంకాలము.",
+        "body_en": "Aupasana is the daily rite a householder performs with his wife after marriage. The marriage fire itself continues as the aupasana fire. It is done daily, morning and evening."
+      },
+      {
+        "head_te": "ఏకాదశి ఉపవాసమునకు అర్థమేమి?",
+        "head_en": "What does the Ekadashi fast mean?",
+        "body_te": "ఉపవాసమనగా కేవలము ఆహారము మానుట కాదు — 'ఉప' అనగా దగ్గరగా, 'వాస' అనగా ఉండుట; భగవంతునికి దగ్గరగా ఉండుట అని అర్థము. కావున ఆ దినమున జపము, పారాయణము అధికముగా చేయవలెను.",
+        "body_en": "Upavasa does not mean merely going without food. Upa is 'near' and vasa is 'to dwell' — to dwell near the divine. So the day is meant to be given over to japa and parayana."
+      },
+      {
+        "head_te": "మంత్రము అర్థము తెలియకున్నను ఫలమిచ్చునా?",
+        "head_en": "Does a mantra work if one does not know its meaning?",
+        "body_te": "శుద్ధమైన ఉచ్చారణతో చేసిన జపము ఫలమిచ్చునని చెప్పబడినది. అయినను అర్థము తెలిసినచో శ్రద్ధ, ఏకాగ్రత పెరుగును. అందుకే ఉచ్చారణతో పాటు అర్థమును కూడ నేర్పుట మంచి పద్ధతి.",
+        "body_en": "Japa done with clean pronunciation is said to bear fruit. Even so, knowing the meaning deepens shraddha and concentration — which is why teaching the sense alongside the pronunciation is the better practice."
+      },
+      {
+        "head_te": "పవిత్రము ఎందుకు ధరించవలెను?",
+        "head_en": "Why is the pavitram worn?",
+        "body_te": "దర్భతో చేసిన పవిత్రమును ఉంగరపు వ్రేలికి ధరించుట కర్మకాలములో శుద్ధిని సూచించును. దర్భకు శుద్ధి చేయు స్వభావము కలదని శాస్త్రము చెప్పుచున్నది.",
+        "body_en": "The pavitram of darbha grass worn on the ring finger marks purity for the duration of the rite. The shastra attributes a purifying quality to darbha."
+      },
+      {
+        "head_te": "నిత్యకర్మలకు, కామ్యకర్మలకు భేదమేమి?",
+        "head_en": "Nitya karma and kamya karma — what is the difference?",
+        "body_te": "నిత్యకర్మలు ప్రతిదినము తప్పక చేయవలసినవి — సంధ్యావందనము, ఔపాసన వంటివి; వీటిని చేయకపోవుట దోషము. కామ్యకర్మలు ఒక ఫలమును కోరి చేయునవి; చేయకపోవుట దోషము కాదు.",
+        "body_en": "Nitya karmas — sandhyavandanam, aupasana and the like — must be done daily, and omitting them is a fault. Kamya karmas are undertaken for a particular end; not doing them is no fault."
+      }
+    ]
+  }
+}

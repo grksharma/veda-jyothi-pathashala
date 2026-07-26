@@ -108,6 +108,48 @@ Edit `LOCATION` at the top of `scripts/fetch-panchangam.mjs` (currently
 - The panchangam block stays in Telugu even in English mode; only the heading
   and buttons translate.
 
+## Daily reading feeds
+
+Below the panchangam the home page shows four cards that change every day at the
+same 4:00 AM IST rollover:
+
+| Card | Source |
+| --- | --- |
+| **ఈరోజు విశిష్టత** | *Derived*, in `scripts/fetch-panchangam.mjs`, from the day's tithi, paksha, masa and weekday |
+| **వేద జీవన విధానం** | `data/feeds.json` → `living` |
+| **ఆరోగ్యకరమైన జీవనము** | `data/feeds.json` → `health` |
+| **ధర్మ సందేహాలు** | `data/feeds.json` → `dharma` |
+
+The three editorial lists rotate by date, so each cycles through indefinitely —
+no one has to top them up. Add, remove or reorder entries freely; the length of
+each list does not matter. Each entry has `head_te`/`head_en` and
+`body_te`/`body_en`.
+
+**⚠️ Please have Guruji review `data/feeds.json` before treating it as the
+pathashala's teaching.** The entries were drafted as a starting point from
+well-established practice, but practice varies by shakha, sutra and family
+custom, and these appear on the site under the pathashala's name. The dharma and
+health lists each carry a standing disclaimer to that effect.
+
+The day-significance card is *derived, never invented* — a festival or vrata is
+only named when the masa, paksha and tithi establish it. If any of those are
+missing the card falls back to the weekday note alone rather than guessing.
+
+## Deployment (Vercel)
+
+Live at **https://vedajyothi.vercel.app**. `vercel.json` sets the cache headers —
+`data/*.json` is always revalidated so the daily feeds are never served stale.
+
+**Connect Vercel to GitHub, do not deploy from the CLI.** The panchangam workflow
+commits new data to this repo; only the Git integration redeploys on those
+commits. A CLI-only deploy would freeze the panchangam at whatever day it was
+last pushed by hand.
+
+1. [vercel.com/new](https://vercel.com/new) → import `grksharma/veda-jyothi-pathashala`
+2. Project name **`vedajyothi`** — this is what produces `vedajyothi.vercel.app`
+3. Framework preset **Other**, no build command, output directory `.`
+4. Deploy
+
 ## Contact details used on the site
 
 - Phone / WhatsApp: **9032644115** (`tel:+919032644115`, `wa.me/919032644115`)

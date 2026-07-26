@@ -58,6 +58,10 @@ window.VJP_I18N = {
     "home.pan.title": "ఈరోజు పంచాంగం",
     "home.pan.lede": "హైదరాబాద్ ప్రాంతమునకు అనుగుణముగా, ప్రతిదినము ఉదయం 4 గంటలకు నవీకరించబడును.",
 
+    "home.feed.eyebrow": "ప్రతిదినము",
+    "home.feed.title": "నేటి పఠనము",
+    "home.feed.lede": "ఈరోజు విశిష్టత, వేద జీవన విధానము, ఆరోగ్యకరమైన దినచర్య, ధర్మ సందేహములు — ప్రతిదినము ఉదయం 4 గంటలకు మారును.",
+
     /* ---- home : guru ---- */
     "home.guru.eyebrow": "మా గురువుగారు",
     "home.guru.title": "బ్రహ్మశ్రీ కొండూరి పవనకుమారశర్మ గారు",
@@ -347,6 +351,10 @@ window.VJP_I18N = {
     "home.pan.eyebrow": "Today's Panchangam",
     "home.pan.title": "Today's Panchangam",
     "home.pan.lede": "Calculated for Hyderabad and refreshed every morning at 4 o'clock.",
+
+    "home.feed.eyebrow": "Every day",
+    "home.feed.title": "Today's reading",
+    "home.feed.lede": "The significance of the day, the Vedic way of living, a healthy daily routine and questions on dharma — all change at 4 o'clock each morning.",
 
     /* ---- home : guru ---- */
     "home.guru.eyebrow": "Our Guru",

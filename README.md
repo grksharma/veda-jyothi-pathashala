@@ -150,6 +150,20 @@ last pushed by hand.
 3. Framework preset **Other**, no build command, output directory `.`
 4. Deploy
 
+## Enquiry form
+
+The contact form POSTs to an n8n webhook, which forwards the enquiry to Guruji's
+WhatsApp. Delivery does not depend on the visitor pressing Send — if the webhook
+is unreachable or unconfigured, the page falls back to opening WhatsApp so an
+enquiry is never silently lost.
+
+Set the webhook URL in [`assets/js/config.js`](assets/js/config.js). Full setup —
+Meta WhatsApp template, self-hosted n8n, CORS, troubleshooting — is in
+[`n8n/README.md`](n8n/README.md).
+
+Nothing in `config.js` is secret; it is served to every visitor. Never put a
+token there.
+
 ## Contact details used on the site
 
 - Phone / WhatsApp: **9032644115** (`tel:+919032644115`, `wa.me/919032644115`)

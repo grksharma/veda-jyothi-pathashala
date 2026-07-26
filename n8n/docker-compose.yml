@@ -1,0 +1,60 @@
+# n8n for Veda Jyothi Pathashala, behind Caddy for automatic HTTPS.
+#
+# The website posts to n8n from the visitor's browser, so n8n must be
+# reachable over public HTTPS — a localhost instance will not work.
+#
+#   1. Point a subdomain (e.g. n8n.yourdomain.com) at this server's IP
+#   2. Fill in the values in .env next to this file
+#   3. docker compose up -d
+#
+# Ports 80 and 443 must be open. Caddy obtains the certificate on first run.
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - n8n
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    restart: unless-stopped
+    environment:
+      # Public address — must match the domain in the Caddyfile.
+      - N8N_HOST=${N8N_HOST}
+      - WEBHOOK_URL=https://${N8N_HOST}/
+      - N8N_PROTOCOL=https
+      - N8N_PORT=5678
+      - N8N_EDITOR_BASE_URL=https://${N8N_HOST}/
+
+      # Editor login.
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_USER}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD}
+
+      - GENERIC_TIMEZONE=Asia/Kolkata
+      - TZ=Asia/Kolkata
+      - N8N_DIAGNOSTICS_ENABLED=false
+
+      # Used by the workflow.
+      - VJP_WHATSAPP_TO=${VJP_WHATSAPP_TO}
+      - VJP_WA_PHONE_NUMBER_ID=${VJP_WA_PHONE_NUMBER_ID}
+
+      # Required so the workflow's Code node can read $env.
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
+    volumes:
+      - n8n_data:/home/node/.n8n
+    expose:
+      - "5678"
+
+volumes:
+  caddy_data:
+  caddy_config:
+  n8n_data:

@@ -1,0 +1,4 @@
+# Replace n8n.example.com with your own subdomain — it must match N8N_HOST in .env.
+n8n.example.com {
+	reverse_proxy n8n:5678
+}

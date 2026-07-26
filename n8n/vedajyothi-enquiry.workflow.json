@@ -1,0 +1,114 @@
+{
+  "name": "Veda Jyothi — enquiry to WhatsApp",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "vedajyothi-enquiry",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://vedajyothi.vercel.app"
+        }
+      },
+      "id": "webhook",
+      "name": "Website form",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "webhookId": "vedajyothi-enquiry"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Validate and shape the enquiry for a WhatsApp template message.\n//\n// Meta rejects template variables that are empty, or that contain a newline\n// or tab, or that have leading/trailing spaces. The visitor's message is\n// free text, so every value has to be flattened before it is sent.\n\nconst RECIPIENT = $env.VJP_WHATSAPP_TO || '919032644115';\n\nconst clean = (value) => {\n  const flat = String(value ?? '')\n    .replace(/[\\r\\n\\t]+/g, ' · ')   // newlines are not allowed in variables\n    .replace(/\\s{2,}/g, ' ')\n    .trim();\n  return flat === '' ? '-' : flat.slice(0, 900);\n};\n\nconst body = $input.first().json.body ?? $input.first().json;\n\n// Server-side honeypot check, in case a bot posts to the webhook directly\n// rather than going through the page.\nif (clean(body.website) !== '-') {\n  return [{ json: { rejected: true, reason: 'honeypot' } }];\n}\n\nconst name = clean(body.name);\nconst phone = clean(body.phone);\n\nif (name === '-' || phone === '-') {\n  return [{ json: { rejected: true, reason: 'missing name or phone' } }];\n}\n\nreturn [{\n  json: {\n    rejected: false,\n    to: RECIPIENT,\n    variables: [\n      name,\n      phone,\n      clean(body.place),\n      clean(body.subject),\n      clean(body.message),\n    ],\n    received_at: new Date().toISOString(),\n    raw: body,\n  },\n}];"
+      },
+      "id": "prepare",
+      "name": "Validate & flatten",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [220, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "version": 2 },
+          "conditions": [
+            {
+              "id": "accepted",
+              "leftValue": "={{ $json.rejected }}",
+              "rightValue": false,
+              "operator": { "type": "boolean", "operation": "false", "singleValue": true }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "gate",
+      "name": "Accepted?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [440, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v21.0/{{ $env.VJP_WA_PHONE_NUMBER_ID }}/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({\n  messaging_product: 'whatsapp',\n  to: $json.to,\n  type: 'template',\n  template: {\n    name: 'vedajyothi_enquiry',\n    language: { code: 'en' },\n    components: [\n      {\n        type: 'body',\n        parameters: $json.variables.map(v => ({ type: 'text', text: v })),\n      },\n    ],\n  },\n}) }}",
+        "options": {}
+      },
+      "id": "send",
+      "name": "Send WhatsApp template",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [680, -100],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE_WITH_CREDENTIAL_ID",
+          "name": "Meta WhatsApp token"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ ok: true }) }}",
+        "options": { "responseCode": 200 }
+      },
+      "id": "ok",
+      "name": "200 OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [920, -100]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ ok: false, reason: $json.reason || 'rejected' }) }}",
+        "options": { "responseCode": 400 }
+      },
+      "id": "rejected",
+      "name": "400 Rejected",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [680, 120]
+    }
+  ],
+  "connections": {
+    "Website form": { "main": [[{ "node": "Validate & flatten", "type": "main", "index": 0 }]] },
+    "Validate & flatten": { "main": [[{ "node": "Accepted?", "type": "main", "index": 0 }]] },
+    "Accepted?": {
+      "main": [
+        [{ "node": "Send WhatsApp template", "type": "main", "index": 0 }],
+        [{ "node": "400 Rejected", "type": "main", "index": 0 }]
+      ]
+    },
+    "Send WhatsApp template": { "main": [[{ "node": "200 OK", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "pinData": {}
+}

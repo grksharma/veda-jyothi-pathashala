@@ -1,5 +1,5 @@
 /* =========================================================
-   Veda Jyothi Pathashala — daily panchangam (Hyderabad)
+   Veda Jyothi Pathashala — daily panchangam
 
    Reads the pre-fetched window in data/panchangam.json and shows the entry
    for the current day. The day turns over at 4:00 AM IST, not midnight, so
@@ -22,14 +22,14 @@
       copied: "కాపీ అయ్యింది ✓",
       share: "వాట్సాప్‌లో పంపండి",
       unavailable: "ఈరోజు పంచాంగం ఇంకా అందుబాటులో లేదు.",
-      note: "హైదరాబాద్ ప్రకారం · ప్రతిరోజు ఉదయం 4 గంటలకు మారును",
+      note: "ప్రతిరోజు ఉదయం 4 గంటలకు మారును",
     },
     en: {
       copy: "Copy",
       copied: "Copied ✓",
       share: "Share on WhatsApp",
       unavailable: "Today's panchangam is not available yet.",
-      note: "Calculated for Hyderabad · rolls over at 4:00 AM IST",
+      note: "Rolls over at 4:00 AM IST",
     },
   };
 

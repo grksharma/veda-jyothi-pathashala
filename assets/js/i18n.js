@@ -56,7 +56,7 @@ window.VJP_I18N = {
     /* ---- home : panchangam ---- */
     "home.pan.eyebrow": "నేటి పంచాంగం",
     "home.pan.title": "ఈరోజు పంచాంగం",
-    "home.pan.lede": "హైదరాబాద్ ప్రాంతమునకు అనుగుణముగా, ప్రతిదినము ఉదయం 4 గంటలకు నవీకరించబడును.",
+    "home.pan.lede": "ప్రతిదినము ఉదయం 4 గంటలకు నవీకరించబడును.",
 
     "home.feed.eyebrow": "ప్రతిదినము",
     "home.feed.title": "నేటి పఠనము",
@@ -354,7 +354,7 @@ window.VJP_I18N = {
     /* ---- home : panchangam ---- */
     "home.pan.eyebrow": "Today's Panchangam",
     "home.pan.title": "Today's Panchangam",
-    "home.pan.lede": "Calculated for Hyderabad and refreshed every morning at 4 o'clock.",
+    "home.pan.lede": "Refreshed every morning at 4 o'clock.",
 
     "home.feed.eyebrow": "Every day",
     "home.feed.title": "Today's reading",

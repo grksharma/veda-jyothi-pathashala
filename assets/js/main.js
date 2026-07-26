@@ -186,32 +186,115 @@
   function initContactForm() {
     var form = document.getElementById("enquiryForm");
     if (!form) return;
+
+    var config = window.VJP_CONFIG || {};
     var status = document.getElementById("formStatus");
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var loadedAt = Date.now();
+
+    function fields() {
+      var data = new FormData(form);
+      var get = function (key) { return (data.get(key) || "").toString().trim(); };
+      return {
+        name: get("name"),
+        phone: get("phone"),
+        place: get("place"),
+        subject: get("subject"),
+        message: get("message"),
+      };
+    }
+
+    /** The enquiry as a WhatsApp-ready block, in the visitor's language. */
+    function asMessage(values, lang) {
+      var labels = lang === "en"
+        ? { head: "Enquiry — Veda Jyothi Pathashala", name: "Name", phone: "Phone", place: "Place", subject: "Subject", message: "Message" }
+        : { head: "వేద జ్యోతి పాఠశాల — విచారణ", name: "పేరు", phone: "ఫోన్", place: "ఊరు", subject: "పాఠ్యాంశము", message: "సందేశము" };
+
+      var lines = [labels.head, ""];
+      ["name", "phone", "place", "subject", "message"].forEach(function (key) {
+        if (values[key]) lines.push(labels[key] + ": " + values[key]);
+      });
+      return lines.join("\n");
+    }
+
+    function whatsappUrl(text) {
+      var number = config.whatsappNumber || form.getAttribute("data-wa");
+      return "https://wa.me/" + number + "?text=" + encodeURIComponent(text);
+    }
+
+    function say(key, kind) {
+      if (!status) return;
+      status.textContent = translate(key, document.documentElement.lang === "en" ? "en" : "te") || "";
+      status.classList.remove("form-status--err");
+      if (kind === "error") status.classList.add("form-status--err");
+      status.classList.add("is-visible");
+    }
+
+    function busy(isBusy) {
+      if (!submitBtn) return;
+      submitBtn.disabled = isBusy;
+      var lang = document.documentElement.lang === "en" ? "en" : "te";
+      submitBtn.textContent = translate(isBusy ? "con.form.sending" : "con.form.submit", lang) || "";
+    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
 
-      var data = new FormData(form);
-      var lang = document.documentElement.lang === "en" ? "en" : "te";
-      var labels = lang === "en"
-        ? { head: "Enquiry — Veda Jyothi Pathashala", name: "Name", phone: "Phone", place: "Place", subject: "Subject", msg: "Message" }
-        : { head: "వేద జ్యోతి పాఠశాల — విచారణ", name: "పేరు", phone: "ఫోన్", place: "ఊరు", subject: "పాఠ్యాంశము", msg: "సందేశము" };
-
-      var lines = [labels.head, ""];
-      [["name", labels.name], ["phone", labels.phone], ["place", labels.place], ["subject", labels.subject], ["message", labels.msg]]
-        .forEach(function (pair) {
-          var value = (data.get(pair[0]) || "").toString().trim();
-          if (value) lines.push(pair[1] + ": " + value);
-        });
-
-      var url = "https://wa.me/" + form.getAttribute("data-wa") + "?text=" + encodeURIComponent(lines.join("\n"));
-      window.open(url, "_blank", "noopener");
-
-      if (status) {
-        status.textContent = translate("con.form.ok", lang) || "";
-        status.classList.add("is-visible");
+      // Honeypot: a real person never fills a hidden field, and never
+      // completes the form within a couple of seconds of it loading.
+      var trap = form.querySelector('input[name="website"]');
+      if ((trap && trap.value) || Date.now() - loadedAt < 2500) {
+        say("con.form.ok");
+        return;
       }
+
+      var lang = document.documentElement.lang === "en" ? "en" : "te";
+      var values = fields();
+      var text = asMessage(values, lang);
+
+      // No webhook configured — behave as before and let the visitor send.
+      if (!config.n8nWebhook) {
+        window.open(whatsappUrl(text), "_blank", "noopener");
+        say("con.form.ok");
+        return;
+      }
+
+      busy(true);
+      say("con.form.sending");
+
+      fetch(config.n8nWebhook, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "vedajyothi.vercel.app",
+          language: lang,
+          submitted_at: new Date().toISOString(),
+          whatsapp_text: text,
+          name: values.name,
+          phone: values.phone,
+          place: values.place,
+          subject: values.subject,
+          message: values.message,
+        }),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          busy(false);
+          say("con.form.delivered");
+          form.reset();
+          loadedAt = Date.now();
+          if (config.openWhatsAppAfterSend) {
+            window.open(whatsappUrl(text), "_blank", "noopener");
+          }
+        })
+        .catch(function (err) {
+          // Delivery failed — fall back to WhatsApp so the enquiry is not lost.
+          console.warn("Enquiry webhook failed, falling back to WhatsApp:", err.message);
+          busy(false);
+          say("con.form.fallback", "error");
+          window.open(whatsappUrl(text), "_blank", "noopener");
+        });
     });
   }
 

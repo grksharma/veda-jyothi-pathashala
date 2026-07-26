@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Marcellus&family=Noto+Sans+Telugu:wght@400;500;600&family=Noto+Serif+Telugu:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/config.js" defer></script>
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </head>
@@ -99,6 +100,10 @@
         <p class="form-note" style="margin-bottom:1.4rem" data-i18n="con.form.lede">ఈ వివరములు నింపి పంపినచో, వాట్సాప్ ద్వారా సందేశము సిద్ధమగును.</p>
 
         <form id="enquiryForm" data-wa="919032644115" novalidate>
+          <div class="hp-field" aria-hidden="true">
+            <label for="f-website" data-i18n="con.form.hp">ఈ గడిని ఖాళీగా ఉంచండి</label>
+            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <div class="form-grid">
             <div class="field">
               <label for="f-name"><span data-i18n="con.form.name">పేరు</span> <span class="req">*</span></label>

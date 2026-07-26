@@ -285,6 +285,10 @@ window.VJP_I18N = {
     "con.form.submit": "వాట్సాప్‌లో పంపండి",
     "con.form.note": "ఈ ఫారమ్ మీ సందేశమును వాట్సాప్‌లో తెరచును. మీ వివరములు ఎక్కడా నిల్వ చేయబడవు.",
     "con.form.ok": "వాట్సాప్ తెరవబడుతోంది… తెరవకపోయినచో నేరుగా 9032644115 నంబరుకు సందేశము పంపగలరు.",
+    "con.form.sending": "పంపుతున్నాము…",
+    "con.form.delivered": "మీ వివరములు అందినవి 🙏 త్వరలో మిమ్మల్ని సంప్రదించెదము.",
+    "con.form.fallback": "సందేశము పంపుటలో ఇబ్బంది కలిగినది. వాట్సాప్ తెరవబడుతోంది — అక్కడ నుండి పంపగలరు.",
+    "con.form.hp": "ఈ గడిని ఖాళీగా ఉంచండి",
 
     /* ---- footer ---- */
     "foot.about": "గృహస్థులకు, వైదికులకు నిత్య అనుష్ఠానములో ఉపయోగపడే విధముగా వేద మంత్రపాఠములను గురుముఖతః నేర్పు ఆన్‌లైన్ పాఠశాల.",
@@ -579,6 +583,10 @@ window.VJP_I18N = {
     "con.form.submit": "Send on WhatsApp",
     "con.form.note": "This form opens your message in WhatsApp. Nothing you type is stored anywhere.",
     "con.form.ok": "Opening WhatsApp… if it does not open, please message 9032644115 directly.",
+    "con.form.sending": "Sending…",
+    "con.form.delivered": "Your details have reached us 🙏 We will be in touch shortly.",
+    "con.form.fallback": "That did not go through. Opening WhatsApp so you can send it from there.",
+    "con.form.hp": "Leave this field empty",
 
     /* ---- footer ---- */
     "foot.about": "An online pathashala teaching Vedic mantra pathams directly from the guru, so that householders and vaidikas can use them in their daily anushthanam.",

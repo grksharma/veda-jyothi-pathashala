@@ -405,6 +405,11 @@ tbody tr:hover { background: var(--cream); }
 .form-status { margin-top: 1rem; font-size: .92rem; padding: .8rem 1rem; border-radius: var(--radius-sm); display: none; }
 .form-status.is-visible { display: block; }
 .form-status--ok { background: rgba(184, 145, 47, .14); border: 1px solid rgba(184, 145, 47, .35); color: #7a6118; }
+.form-status--err { background: rgba(122, 20, 32, .08); border-color: rgba(122, 20, 32, .3); color: var(--maroon); }
+.btn[disabled] { opacity: .65; cursor: progress; transform: none; }
+
+/* Honeypot — off-screen for people, still fillable by bots. */
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* ---------- Contact list ---------- */
 .contact-list { list-style: none; display: grid; gap: 1.15rem; }
